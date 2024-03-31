@@ -4,9 +4,8 @@ import torch.nn as nn
 import pandas as pd
 
 from sklearn.model_selection import KFold
-from ignite.contrib.metrics import CohenKappa
 
-from embedding import embed, embed_essay
+from .embedding import embed, embed_essay
 
 EPOCHS = 100
 
