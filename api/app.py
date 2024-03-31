@@ -11,8 +11,7 @@ def hello_world():
 
 @app.route("/api/request/", methods=["GET", "POST"])
 def send_msg():
-    print(request.get_json()["essay"])
-    return jsonify({'message': request.get_json()["essay"]})
+    return jsonify({'message': 'I have replied'})
 
 
 
