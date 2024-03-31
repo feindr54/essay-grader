@@ -4,6 +4,7 @@ import styles from '../styles/globals.css'
 import { useEffect, useState } from 'react'
 import Link from 'next/link';
 
+
 const backend = 'http://localhost:5000/'
 
 const Home = () => {

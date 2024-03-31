@@ -11,9 +11,10 @@ const backend = 'http://localhost:5000/'
 
 
 const Form = ({request, setRequest, submit, handleSubmit }) => {
-
     const [message, setMessage] = useState("");
     const [loading, setLoading] = useState(true);
+
+    var message_request = 0;
 
     const send = (e) => {
         e.preventDefault();
@@ -36,9 +37,10 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
             .then(res => res.json())
             .then(data => {
                 setMessage(data.message);
-                console.log(data.message)
+                console.log(data.message);
+                message_request = data.message;
                 setLoading(false);
-                setRequest(data.message)
+                setRequest(data.message);
               //go to result and give it data.message
                 
               //navigate('/result', { replace: true });
@@ -53,6 +55,7 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
             //         />
 
             // )
+            alert("Your essay score is " + message_request);
      }
   return (
     <section className = "w-full max-w-full flex-start flex-col">
