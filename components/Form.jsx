@@ -1,6 +1,5 @@
 "use client";
 import Link from 'next/link'
-import Result from '@components/Result';
 
 import { useEffect, useState } from 'react'
 
@@ -65,7 +64,7 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
             </span>
         </h1>
         <p className = "desc text-left max-w-md">
-            and sit back and relax as the AI evaluates and grades the text!
+            ...and sit back and relax as the AI evaluates and grades the text!
         </p>
 
         <div
@@ -78,16 +77,15 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
                     
                     <form method="post" onSubmit={send}>
                         <label>
-                            Enter your essay:
                             <textarea
                                 name="postContent"
-                            defaultValue="Enter your essay here..."
+                            defaultValue=""
                             rows={4}
-                            cols={40}
+                            cols={50}
                             />
                         </label>
                         <hr />
-                        <button type="submit">Grade Essay</button>
+                        <button type="submit" className = "black_btn">Grade Essay</button>
                     </form>
 
                     {/* <textarea

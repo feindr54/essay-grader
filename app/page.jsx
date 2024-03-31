@@ -50,7 +50,7 @@ const Home = () => {
             <span className = "head_text green_gradient text-center"> Human-Centric Learning</span>
         </h1>
         <div className={styles.container}>
-          <p> {!loading ? message : "Loading.."}</p>
+          {/* <p> {!loading ? message : "Loading.."}</p> */}
 
         </div>
         <p className = "desc text-center">
@@ -60,7 +60,7 @@ const Home = () => {
         <div><br /></div>
         <div className = "flex gap-3 md:gap-5">
                 <Link href = "/program" className = "black_btn">
-                    Let's Go
+                    Let's Go!
                 </Link>
             </div>
     </section>
