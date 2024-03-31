@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom';
 
+import Alert from '@mui/material/Alert';
+
 const backend = 'http://127.0.0.1:5000/'
 
 
@@ -32,15 +34,16 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formJson),//formData,
         //mode: "no-cors"
-      })
+        })
             .then(res => res.json())
             .then(data => {
                 setMessage(data.message);
-                console.log(data.message);
                 message_request = data.message;
                 setLoading(false);
                 setRequest(data.message);
-                alert("Your essay score is " + message_request);
+                document.getElementById("alert").textContent = "Your essay score is " + message_request;
+                document.getElementById("alert").style.display = "block";
+                // alert("Your essay score is " + message_request);
               //go to result and give it data.message
                 
               //navigate('/result', { replace: true });
@@ -69,22 +72,20 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
 
         <div
             //onSubmit = {handleSubmit}
-            className = "mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
+            className = "mt-10 w-full max-w-4xl flex flex-col gap-7 glassmorphism">
                 <label>
                     <span className = "font-inter font-semibold text-base text-gray-800">
                         Type or paste your essay here:
                     </span>
-                    
                     <form method="post" onSubmit={send}>
                         <label>
                             <textarea
                                 name="postContent"
                             defaultValue=""
-                            rows={4}
-                            cols={50}
+                            rows={12}
+                            cols={114}
                             />
                         </label>
-                        <hr />
                         <button type="submit" className = "black_btn">Grade Essay</button>
                     </form>
 
@@ -102,6 +103,7 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
                         </button>
                     </div> */}
         </div>
+        <Alert severity="success" id = "alert" style = {{display:"none"}}>This is a success Alert.</Alert>
     </section>
   )
 }
