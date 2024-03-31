@@ -19,7 +19,6 @@ def send_msg():
     print(score)
     return jsonify({'message': round(score, 2)})
 
- 
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
