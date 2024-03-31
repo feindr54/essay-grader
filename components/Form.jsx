@@ -72,22 +72,20 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
 
         <div
             //onSubmit = {handleSubmit}
-            className = "mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
+            className = "mt-10 w-full max-w-4xl flex flex-col gap-7 glassmorphism">
                 <label>
                     <span className = "font-inter font-semibold text-base text-gray-800">
                         Type or paste your essay here:
                     </span>
-                    
                     <form method="post" onSubmit={send}>
                         <label>
                             <textarea
                                 name="postContent"
                             defaultValue=""
-                            rows={4}
-                            cols={50}
+                            rows={12}
+                            cols={114}
                             />
                         </label>
-                        <hr />
                         <button type="submit" className = "black_btn">Grade Essay</button>
                     </form>
 
