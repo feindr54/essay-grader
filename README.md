@@ -2,7 +2,7 @@
 
 ## What is it
 
-NivelMate is a service that uses machine-learning algorithms to grade essays. It takes in thousands of existing essays and scores and incorporates NLP models to create an accurate essay evaluator. his approach enables NivelMate to provide an accurate, consistent, and objective evaluation of essays across a wide range of topics, rubrics and writing styles .
+NivelMate is a service that uses machine-learning algorithms to grade essays. It takes in thousands of existing essays and scores and incorporates NLP models to create an accurate essay evaluator. This approach enables NivelMate to provide an accurate, consistent, and objective evaluation of essays across a wide range of topics, rubrics and writing styles .
 
 ## How we did it
 
