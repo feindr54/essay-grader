@@ -1,5 +1,7 @@
 import '@styles/globals.css';
 
+import Nav from '@components/Nav';
+
 export const metadata = {
     title: "NivelMate",
     description: 'AI-Powered Essay Grading, Human-Centric Learning'
@@ -14,6 +16,7 @@ const RootLayout = ({ children }) => {
             </div>
 
         <main className = "app">
+            <Nav/>
             {children}
         </main>
         </body>
