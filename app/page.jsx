@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link';
 
 
-const backend = 'http://127.0.0.1:5000/'
+const backend = 'http://127.0.0.1:8080/'
 
 const Home = () => {
 
@@ -26,19 +26,19 @@ const Home = () => {
     "essay": "Talk about Flask here. I love flask. I love next.js. They are so well written!",
   }
 
-  useEffect(() => {
-    fetch(backend + 'api/request/', {
-      method: 'POST',
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(data),
-      //mode: "no-cors"
-    })
-        .then(res => res.json())
-        .then(data => {
-            setMessage(data.message);
-            setLoading(false);
-        })
-}, [])
+//   useEffect(() => {
+//     fetch(backend + 'api/request/', {
+//       method: 'POST',
+//       headers: {"Content-Type": "application/json"},
+//       body: JSON.stringify(data),
+//       //mode: "no-cors"
+//     })
+//         .then(res => res.json())
+//         .then(data => {
+//             setMessage(data.message);
+//             setLoading(false);
+//         })
+// }, [])
 
   
 
