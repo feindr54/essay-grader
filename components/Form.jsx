@@ -5,6 +5,8 @@ import { useEffect, useState } from 'react'
 
 import { useNavigate } from 'react-router-dom';
 
+import Alert from '@mui/material/Alert';
+
 const backend = 'http://localhost:5000/'
 
 
@@ -32,15 +34,16 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(formJson),//formData,
         //mode: "no-cors"
-      })
+        })
             .then(res => res.json())
             .then(data => {
                 setMessage(data.message);
-                console.log(data.message);
                 message_request = data.message;
                 setLoading(false);
                 setRequest(data.message);
-                alert("Your essay score is " + message_request);
+                document.getElementById("alert").textContent = "Your essay score is " + message_request;
+                document.getElementById("alert").style.display = "block";
+                // alert("Your essay score is " + message_request);
               //go to result and give it data.message
                 
               //navigate('/result', { replace: true });
@@ -102,6 +105,7 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
                         </button>
                     </div> */}
         </div>
+        <Alert severity="success" id = "alert" style = {{display:"none"}}>This is a success Alert.</Alert>
     </section>
   )
 }
