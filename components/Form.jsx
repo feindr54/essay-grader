@@ -41,6 +41,7 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
                 message_request = data.message;
                 setLoading(false);
                 setRequest(data.message);
+                alert("Your essay score is " + message_request);
               //go to result and give it data.message
                 
               //navigate('/result', { replace: true });
@@ -55,7 +56,6 @@ const Form = ({request, setRequest, submit, handleSubmit }) => {
             //         />
 
             // )
-            alert("Your essay score is " + message_request);
      }
   return (
     <section className = "w-full max-w-full flex-start flex-col">
