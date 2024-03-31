@@ -9,13 +9,22 @@ const Nav = () => {
     <nav className = "flex-between w-full mb-16 pt-3">
         <Link href = "/" className = "flex gap-2 flex-center">
             <Image
-                src = "/assets/images/nivellogo.png"
+                src = "/assets/images/nivelmatelogo.svg"
                 alt = "NivelMate Logo"
-                width = {50}
-                height = {50}
+                width = {20}
+                height = {20}
                 className = "object-contain"
             />
+            <p className = "logo_text">NivelMate</p>
         </Link>
+        <br className = "max-md:hidden" />
+        <div className = "sm:flex hidden">
+            <div className = "flex gap-3 md:gap-5">
+                <Link href = "/about" className = "outline_btn">
+                    About
+                </Link>
+            </div>
+        </div>
     </nav>
   )
 }
